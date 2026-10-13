@@ -1,0 +1,5 @@
+Model,CV accuracy,Std
+SVM (RBF),0.9812,0.0061
+KNN,0.9756,0.0099
+Random Forest,0.9749,0.0078
+Logistic Regression,0.968,0.0074

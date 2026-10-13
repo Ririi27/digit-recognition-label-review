@@ -1,0 +1,46 @@
+Images: (1797, 64) | Classes: [0 1 2 3 4 5 6 7 8 9]
+Class counts: {np.int64(0): np.int64(178), np.int64(1): np.int64(182), np.int64(2): np.int64(177), np.int64(3): np.int64(183), np.int64(4): np.int64(181), np.int64(5): np.int64(182), np.int64(6): np.int64(181), np.int64(7): np.int64(179), np.int64(8): np.int64(174), np.int64(9): np.int64(180)}
+
+               Model  CV accuracy    Std
+          SVM (RBF)       0.9812 0.0061
+                KNN       0.9756 0.0099
+      Random Forest       0.9749 0.0078
+Logistic Regression       0.9680 0.0074
+
+Best model: SVM (RBF) | test accuracy = 0.9750
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        36
+           1       0.95      0.97      0.96        36
+           2       1.00      1.00      1.00        35
+           3       1.00      1.00      1.00        37
+           4       0.95      0.97      0.96        36
+           5       0.97      1.00      0.99        37
+           6       0.97      1.00      0.99        36
+           7       0.92      0.97      0.95        36
+           8       1.00      0.91      0.96        35
+           9       1.00      0.92      0.96        36
+
+    accuracy                           0.97       360
+   macro avg       0.98      0.97      0.97       360
+weighted avg       0.98      0.97      0.97       360
+
+Most common confusions (true, predicted, count): [(8, 1, 2), (9, 7, 2), (1, 4, 1)]
+
+Injected 89 wrong labels (5%). Review results: {
+ "top_89": {
+  "flagged": 89,
+  "noisy_caught": 83,
+  "precision": 0.933,
+  "recall": 0.933
+ },
+ "top_178": {
+  "flagged": 178,
+  "noisy_caught": 89,
+  "precision": 0.5,
+  "recall": 1.0
+ }
+}
+
+Cohen's kappa: {'svm_vs_labels': 0.9821, 'rf_vs_labels': 0.9771, 'svm_vs_rf': 0.974}
+Images where both models disagree with the label: 11
